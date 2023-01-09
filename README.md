@@ -25,6 +25,7 @@ Uplay games:                 `<Lutris installation directory>/Games/ubisoft-conn
 
 The Witcher III - Wild Hunt: `<Lutris installation directory>/Games/gog/the-witcher-3-wild-hunt-game-of-the-year-edition/drive_c/users/deck/Documents/The\ Witcher\ 3/gamesaves`  
 Uplay games:                 `<Lutris installation directory>/Games/ubisoft-connect/drive_c/Program\ Files\ \(x86\)/Ubisoft/Ubisoft\ Game\ Launcher/savegames`  
+DeSmuME:                     `~/.var/app/net.lutris.Lutris/config/desmume`__
 
 ## Lutris games config
 yaml files: `~/.var/app/net.lutris.Lutris/config/lutris/games`  
