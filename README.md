@@ -16,10 +16,6 @@ Uplay games:                 `<Lutris installation directory>/Games/ubisoft-conn
 GOG games:                   `~/.var/app/net.lutris.Lutris/cache/lutris/coverart`  
 Uplay games:                 `<Lutris installation directory>/Games/ubisoft-connect/drive_c/Program\ Files\ \(x86\)/Ubisoft/Ubisoft\ Game\ Launcher/cache/assets`  
 
-`curl -o ~/Pictures/pokemon_shining_pearl_logo.png https://diamondpearl.pokemon.com/en-us/assets/logo_sp.png`  
-`curl -o ~/Pictures/pokemon_shining_pearl_cover.png https://diamondpearl.pokemon.com/en-us/assets/boxart_sp.png`  
-`curl -o ~/Pictures/pokemon_shining_pearl_background.jpg https://diamondpearl.pokemon.com/en-us/assets/billboard-mobile.jpg`  
-
 ## Set Steam custom background
 
 GOG games:                   `~/.var/app/net.lutris.Lutris/cache/lutris/gog/banners/large`  
