@@ -34,6 +34,9 @@ yaml files: `~/.var/app/net.lutris.Lutris/config/lutris/games`
 appimage:   `~/.var/app/net.lutris.Lutris/data/lutris/runners`  
 yaml files: `~/.var/app/net.lutris.Lutris/config/lutris/runners`  
 
+## Lutris runners documentation
+DeSmuME: `man ~/.var/app/net.lutris.Lutris/data/lutris/runners/desmume/share/man/man1/desmume.1`  
+
 ## Migrate Yuzu to Lutris
 ```
 mv ~/.local/share/yuzu ~/.var/app/net.lutris.Lutris/data/
