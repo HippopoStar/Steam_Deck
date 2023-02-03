@@ -1,5 +1,9 @@
 # Steam\_Deck
 
+[ingenhaag - GetMyDeck](https://getmydeck.ingenhaag.dev/s/EU/512/1646213674)  
+[ProtonDB](https://www.protondb.com/)  
+[MangoHud](https://github.com/flightlessmango/MangoHud)  
+
 [GitHub - Guide to generating SSH Keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)  
 [Steam Support - Steam Deck Desktop: FAQ](https://help.steampowered.com/faqs/view/671A-4453-E8D2-323C)  
 [Steam Support - Instructions de recuperation pour Steam Deck](https://help.steampowered.com/faqs/view/1B71-EDF2-EB6D-2BB3)  
@@ -55,7 +59,7 @@ system:
 
 ## Lutris FPS limiter
 [libstrangle](https://gitlab.com/torkel104/libstrangle)  
-__Deprecated__  
+__Download ArchLinux ISO (deprecated)__  
 ```
 MY_DIR=~/Documents/archlinux
 MY_DATE="$( date --utc +'%Y.%m.%d' )"
@@ -133,7 +137,8 @@ cp squashfs-root/usr/local/lib/libstrangle/lib64/libstrangle_vk.so "${MY_LIB64_D
 ```
 __Retrieve libstrangle from disk image (flatpak install)__  
 ```
-MY_BINARY_DIR=/var/lib/flatpak/app/net.lutris.Lutris/x86_64/stable/9c10163b7fc0895e76a4053cde5e81fbf90ef91e38ba02eac55f486fbd8f4ace/files/bin
+MY_BINARY_DIR="$( find /var/lib/flatpak/app/net.lutris.Lutris/x86_64/stable -type d -path '*/files/bin' -print | head -n 1 )"
+LIBSTRANGLE_DIR=squashfs-root/usr/local/lib/libstrangle
 
 sudo cp squashfs-root/usr/local/bin/strangle "${MY_BINARY_DIR}/"
 sudo cp squashfs-root/usr/local/bin/stranglevk "${MY_BINARY_DIR}/"
@@ -146,15 +151,15 @@ sudo find /var/lib/flatpak/runtime -type d -path '*/vulkan/implicit_layer.d' -ok
 
 # Following commands will require you to type 'y' and press ENTER:
 
-find /var/lib/flatpak/runtime/org.freedesktop.Platform.GL.default -type d -path '*/files/lib' -ok sudo cp squashfs-root/usr/local/lib/libstrangle/lib64/libstrangle.so squashfs-root/usr/local/lib/libstrangle/lib64/libstrangle_nodlsym.so squashfs-root/usr/local/lib/libstrangle/lib64/libstrangle_vk.so '{}'/ \;
+find /var/lib/flatpak/runtime/org.freedesktop.Platform.GL.default -type d -path '*/files/lib' -ok sudo cp "${LIBSTRANGLE_DIR}/lib64/libstrangle.so" "${LIBSTRANGLE_DIR}/lib64/libstrangle_nodlsym.so" "${LIBSTRANGLE_DIR}/lib64/libstrangle_vk.so" '{}'/ \;
 
-find /var/lib/flatpak/runtime/org.freedesktop.Platform.GL32.default -type d -path '*/files/lib' -ok sudo cp squashfs-root/usr/local/lib/libstrangle/lib32/libstrangle.so squashfs-root/usr/local/lib/libstrangle/lib32/libstrangle_nodlsym.so squashfs-root/usr/local/lib/libstrangle/lib32/libstrangle_vk.so '{}'/ \;
+find /var/lib/flatpak/runtime/org.freedesktop.Platform.GL32.default -type d -path '*/files/lib' -ok sudo cp "${LIBSTRANGLE_DIR}/lib32/libstrangle.so" "${LIBSTRANGLE_DIR}/lib32/libstrangle_nodlsym.so" "${LIBSTRANGLE_DIR}/lib32/libstrangle_vk.so" '{}'/ \;
 ```
 __Remove disk image__  
 ```
 sudo rm --recursive --interactive='never' squashfs-root
 ```
-__Grant dynamic linker access to shared objects__  
+__Grant dynamic linker access to shared objects (native install)__  
 ```
 sudo cat <<_EOF > /etc/ld.so.conf.d/libstrangle.conf
 /home/deck/.local/lib/libstrangle/lib32/
@@ -162,7 +167,7 @@ sudo cat <<_EOF > /etc/ld.so.conf.d/libstrangle.conf
 _EOF
 ldconfig
 ```
-__Add home binary directory to environnement variable PATH__  
+__Add home binary directory to environnement variable PATH (native install)__  
 ```
 sudo cat <<_EOF > /etc/profile.d/add_home_binary_dir_to_env_path.sh
 if [ -n "${HOME}" ] && [ -d "${HOME}/bin" ]; then
@@ -170,7 +175,7 @@ if [ -n "${HOME}" ] && [ -d "${HOME}/bin" ]; then
 fi
 _EOF
 ```
-__Grant Lutris visibility on strangle (optional)__  
+__Grant Lutris visibility on strangle (native install, deprecated)__  
 ```
 sudo steamos-readonly disable
 sudo ln -s /home/deck/bin/strangle /usr/local/bin/strangle
@@ -186,6 +191,8 @@ yaml files: `~/.var/app/net.lutris.Lutris/config/lutris/runners`
 DeSmuME: `man ~/.var/app/net.lutris.Lutris/data/lutris/runners/desmume/share/man/man1/desmume.1`  
 
 ## Migrate Yuzu to Lutris
+[Lutris - Games - Yuzu](https://lutris.net/games/yuzu/)  
+[AppImage/AppImageKit Wiki - FUSE](https://github.com/AppImage/AppImageKit/wiki/FUSE#docker)  
 ```
 mv ~/.local/share/yuzu ~/.var/app/net.lutris.Lutris/data/
 mv ~/.config/yuzu      ~/.var/app/net.lutris.Lutris/config/
