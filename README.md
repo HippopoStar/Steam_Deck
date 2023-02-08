@@ -44,6 +44,9 @@ The Witcher III - Wild Hunt: `<Lutris installation directory>/Games/gog/the-witc
 Uplay games:                 `<Lutris installation directory>/Games/ubisoft-connect/drive_c/Program\ Files\ \(x86\)/Ubisoft/Ubisoft\ Game\ Launcher/savegames`  
 DeSmuME:                     `~/.var/app/net.lutris.Lutris/config/desmume`__
 
+## Steam games launch options
+Monster Hunter World: `MANGOHUD_CONFIG='fps_limit=40,no_display' mangohud %command%`  
+
 ## Lutris games config
 yaml files: `~/.var/app/net.lutris.Lutris/config/lutris/games`  
 
