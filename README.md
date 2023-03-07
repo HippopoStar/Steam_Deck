@@ -44,6 +44,23 @@ The Witcher III - Wild Hunt: `<Lutris installation directory>/Games/gog/the-witc
 Uplay games:                 `<Lutris installation directory>/Games/ubisoft-connect/drive_c/Program\ Files\ \(x86\)/Ubisoft/Ubisoft\ Game\ Launcher/savegames`  
 DeSmuME:                     `~/.var/app/net.lutris.Lutris/config/desmume`__
 
+## Steam Game Ids
+[39140](https://store.steampowered.com/app/39140/FINAL_FANTASY_VII/)  
+[200260](https://store.steampowered.com/app/200260/Batman_Arkham_City__Game_of_the_Year_Edition/)  
+[252950](https://store.steampowered.com/app/252950/Rocket_League/)  
+[268910](https://store.steampowered.com/app/268910/Cuphead/)  
+[437920](https://store.steampowered.com/app/437920/Tricky_Towers/)  
+[582010](https://store.steampowered.com/app/582010/Monster_Hunter_World/)  
+[728880](https://store.steampowered.com/app/728880/Overcooked_2/)  
+[814380](https://store.steampowered.com/app/814380/Sekiro_Shadows_Die_Twice__GOTY_Edition/)  
+[1145360](https://store.steampowered.com/app/1145360/Hades/)  
+[1172620](https://store.steampowered.com/app/1172620/Sea_of_Thieves/)  
+[1222680](https://store.steampowered.com/app/1222680/Need_for_Speed_Heat/)  
+[1276790](https://store.steampowered.com/app/1276790/Ruined_King_A_League_of_Legends_Story/)  
+[1295510](https://store.steampowered.com/app/1295510/DRAGON_QUEST_XI_S__Les_Combattants_de_la_destine__dition_ultime/)  
+[1462040](https://store.steampowered.com/app/1462040/FINAL_FANTASY_VII_REMAKE_INTERGRADE/)  
+[1608070](https://store.steampowered.com/app/1608070/CRISIS_CORE_FINAL_FANTASY_VII_REUNION/)  
+
 ## Steam games launch options
 Monster Hunter World: `MANGOHUD_CONFIG='fps_limit=40,no_display' mangohud %command%`  
 
