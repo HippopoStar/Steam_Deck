@@ -241,6 +241,7 @@ _EOF
 Notes:  
 \- Menu Bar will show when positionning mouse cursor on top only when window is maximized  
 \- `cat /var/lib/flatpak/exports/share/applications/org.yuzu_emu.yuzu.desktop`  
+\- `xdg-open /var/lib/flatpak/app/org.yuzu_emu.yuzu/current/active/export/share/applications/`  
 Yuzu folder: `~/.var/app/org.yuzu_emu.yuzu/data/yuzu`  
 SVG icon:    `/var/lib/flatpak/exports/share/icons/hicolor/scalable/apps/org.yuzu_emu.yuzu.svg`  
 
@@ -248,6 +249,13 @@ SVG icon:    `/var/lib/flatpak/exports/share/icons/hicolor/scalable/apps/org.yuz
 Run a game from command line:  
 ```
 /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=yuzu org.yuzu_emu.yuzu -g <game_file_path>
+```
+
+[ArchLinux - Desktop Entries](https://wiki.archlinux.org/title/Desktop_entries)  
+```
+MY_DESKTOP_ENTRY_FILE=~/.var/app/org.yuzu_emu.yuzu/data/applications/yuzu-0100F2C0115B6000.desktop
+desktop-file-validate "${MY_DESKTOP_ENTRY_FILE}"
+kioclient exec "${MY_DESKTOP_ENTRY_FILE}"
 ```
 
 1. Yuzu -> Right click on selected game -> Create Shortcut -> Add to Applications menu  
