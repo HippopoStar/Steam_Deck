@@ -217,7 +217,7 @@ yaml files: `~/.var/app/net.lutris.Lutris/config/lutris/runners`
 ## Lutris runners documentation
 DeSmuME: `man ~/.var/app/net.lutris.Lutris/data/lutris/runners/desmume/share/man/man1/desmume.1`  
 
-## Migrate Yuzu to Lutris
+## Yuzu - Migrate from Flatpak to Lutris
 [Lutris - Games - Yuzu](https://lutris.net/games/yuzu/)  
 [AppImage/AppImageKit Wiki - FUSE](https://github.com/AppImage/AppImageKit/wiki/FUSE#docker)  
 ```
@@ -235,4 +235,25 @@ yuzu:
 
 _EOF
 ```
+
+## Yuzu - Use FlatPak
+
+Notes:  
+\- Menu Bar will show when positionning mouse cursor on top only when window is maximized  
+\- `cat /var/lib/flatpak/exports/share/applications/org.yuzu_emu.yuzu.desktop`  
+Yuzu folder: `~/.var/app/org.yuzu_emu.yuzu/data/yuzu`  
+SVG icon:    `/var/lib/flatpak/exports/share/icons/hicolor/scalable/apps/org.yuzu_emu.yuzu.svg`  
+
+`find /var/lib/flatpak/ -regex '/var/lib/flatpak/app/org.yuzu_emu.yuzu/x86_64/stable/[a-f0-9]+/files/bin/yuzu'`  
+Run a game from command line:  
+```
+/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=yuzu org.yuzu_emu.yuzu -g <game_file_path>
+```
+
+1. Yuzu -> Right click on selected game -> Create Shortcut -> Add to Applications menu  
+2. `~/.var/app/org.yuzu_emu.yuzu/data/applications/yuzu-0100F2C0115B6000.desktop`, entries `TryExec` and `Exec`: replace occurences of `yuzu` by `/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=yuzu org.yuzu_emu.yuzu`  
+3. `ln -s ~/.var/app/org.yuzu_emu.yuzu/data/applications/yuzu-0100F2C0115B6000.desktop ~/Desktop/`  
+
+Lutris -> Yuzu -> Configure -> Custom executable for the runner:  
+From `/home/deck/.var/app/net.lutris.Lutris/data/lutris/runners/yuzu/yuzu`  
 
