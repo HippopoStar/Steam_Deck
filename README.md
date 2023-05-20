@@ -19,6 +19,13 @@ Usage: steamos-readonly enable|disable|status
 Enable or disable read-only on the current running SteamOS.
 ```
 
+[Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader)  
+[PowerTools](https://github.com/NGnius/PowerTools)  
+SMT: Simultaneous Multi Threading  
+```
+curl -o ~/Desktop/decky_installer.desktop https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/decky_installer.desktop
+```
+
 ## Set desktop icons
 
 Steam:                       `~/.local/share/Steam/steam/games`  
