@@ -14,6 +14,7 @@ curl https://images.ctfassets.net/xuwlxvgj0hyl/2Hddt0JUy8NYiLt91o4P5c/f93661c8f9
 curl https://assets.nintendo.eu/image/upload/t_product_tile_desktop/v1/MNS/NOE/70010000063715/1.1_ProductTile_Switch_TheLegendOfZeldaTearsOfTheKingdom_KeyArt_EN_NOE
 curl https://assets.nintendo.com/image/upload/ncom/My%20Nintendo%20Store/EN-US/Nintendo%20Switch%20Software/the-legend-of-zelda-tears-of-the-kingdom-112383/112383-nintendo-the-legeld-of-zelda-tears-of-the-kingdom-1200x675
 curl https://assets.nintendo.eu/image/upload/v1675920708/ri1wpkayyhtl6msyhcc4.png
+curl https://assets.nintendo.com/image/upload/Microsites/zelda-totk-pmp/link-highlight
 curl https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_TloZTearsOfTheKingdom_Gamepage_bannerXS.jpg
 curl https://fs-prod-cdn.nintendo-europe.com/media/images/08_content_images/country_support_2/uk_6/HAC_ZTOK_Poster_A2_image600w.jpg
 curl https://assets.nintendo.com/image/upload/ncom/en_US/merchandising/center-stage-banner/the-legend-of-zelda-tears-of-the-kingdom-switch/3600x1300_centerstage_desktop
