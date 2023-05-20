@@ -258,9 +258,16 @@ desktop-file-validate "${MY_DESKTOP_ENTRY_FILE}"
 kioclient exec "${MY_DESKTOP_ENTRY_FILE}"
 ```
 
+`TITLE_ID=0100F2C0115B6000`  
 1. Yuzu -> Right click on selected game -> Create Shortcut -> Add to Applications menu  
-2. `~/.var/app/org.yuzu_emu.yuzu/data/applications/yuzu-0100F2C0115B6000.desktop`, entries `TryExec` and `Exec`: replace occurences of `yuzu` by `/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=yuzu org.yuzu_emu.yuzu`  
-3. `ln -s ~/.var/app/org.yuzu_emu.yuzu/data/applications/yuzu-0100F2C0115B6000.desktop ~/Desktop/`  
+2. `~/.var/app/org.yuzu_emu.yuzu/data/applications/yuzu-${TITLE_ID}.desktop`:  
+   \- Entry `TryExec` -> comment  
+   \- Entry `Exec` -> replace `yuzu` by `/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=yuzu org.yuzu_emu.yuzu`  
+3. `desktop-file-validate ~/.var/app/org.yuzu_emu.yuzu/data/applications/yuzu-${TITLE_ID}.desktop`  
+4. `desktop-file-install --dir=${HOME}/.local/share/applications/ ~/.var/app/org.yuzu_emu.yuzu/data/applications/yuzu-${TITLE_ID}.desktop`  
+5. `chmod a+x ~/.local/share/applications/yuzu-${TITLE_ID}.desktop`  
+6. `update-desktop-database`  
+7. `ln -s ~/.local/share/applications/yuzu-${TITLE_ID}.desktop ~/Desktop/`  
 
 Lutris -> Yuzu -> Configure -> Custom executable for the runner:  
 From `/home/deck/.var/app/net.lutris.Lutris/data/lutris/runners/yuzu/yuzu`  
