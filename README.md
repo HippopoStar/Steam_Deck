@@ -23,7 +23,7 @@ Enable or disable read-only on the current running SteamOS.
 [PowerTools](https://github.com/NGnius/PowerTools)  
 SMT: Simultaneous Multi Threading  
 ```
-curl -o ~/Desktop/decky_installer.desktop https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/decky_installer.desktop
+curl -L -o ~/Desktop/decky_installer.desktop https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/decky_installer.desktop
 ```
 
 ## Set desktop icons
