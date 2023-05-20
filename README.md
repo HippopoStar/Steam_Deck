@@ -269,6 +269,11 @@ kioclient exec "${MY_DESKTOP_ENTRY_FILE}"
 6. `update-desktop-database`  
 7. `ln -s ~/.local/share/applications/yuzu-${TITLE_ID}.desktop ~/Desktop/`  
 
+/!\\ When creating a Desktop Entry, it will not show up immediately in Dolphin file explorer.  
+    Refreshing directory will not work either.  
+    -> Quit Dolphin and re-open it  
+/!\\ `desktop-file-validate` does not detect the error when arguments are passed to the `TryExec` executable  
+
 Lutris -> Yuzu -> Configure -> Custom executable for the runner:  
 From `/home/deck/.var/app/net.lutris.Lutris/data/lutris/runners/yuzu/yuzu`  
 

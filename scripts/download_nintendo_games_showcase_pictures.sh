@@ -3,22 +3,36 @@
 ##### NINTENDO SWITCH
 
 ```
-mkdir ~/Pictures/The_Legend_of_Zelda_-_Tears_of_the_Kingdom
-cd ~/Pictures/The_Legend_of_Zelda_-_Tears_of_the_Kingdom/
-curl https://zelda.com/tears-of-the-kingdom/_images/features/features-skies-medium-up.jpg
-curl https://zelda.com/tears-of-the-kingdom/_images/features/features-surface-medium-up.jpg
-curl https://zelda.com/tears-of-the-kingdom/_images/features/link.png
-curl https://zelda.com/tears-of-the-kingdom/_images/videos/link-crouching.png
-curl https://zelda.com/tears-of-the-kingdom/_images/buy/header-link.png
-curl https://images.ctfassets.net/xuwlxvgj0hyl/2Hddt0JUy8NYiLt91o4P5c/f93661c8f984b94bacd89223fcfad1b3/2250x1266_Ncom_TOTK
-curl https://assets.nintendo.eu/image/upload/t_product_tile_desktop/v1/MNS/NOE/70010000063715/1.1_ProductTile_Switch_TheLegendOfZeldaTearsOfTheKingdom_KeyArt_EN_NOE
-curl https://assets.nintendo.com/image/upload/ncom/My%20Nintendo%20Store/EN-US/Nintendo%20Switch%20Software/the-legend-of-zelda-tears-of-the-kingdom-112383/112383-nintendo-the-legeld-of-zelda-tears-of-the-kingdom-1200x675
-curl https://assets.nintendo.eu/image/upload/v1675920708/ri1wpkayyhtl6msyhcc4.png
-curl https://assets.nintendo.com/image/upload/Microsites/zelda-totk-pmp/link-highlight
-curl https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_TloZTearsOfTheKingdom_Gamepage_bannerXS.jpg
-curl https://fs-prod-cdn.nintendo-europe.com/media/images/08_content_images/country_support_2/uk_6/HAC_ZTOK_Poster_A2_image600w.jpg
-curl https://assets.nintendo.com/image/upload/ncom/en_US/merchandising/center-stage-banner/the-legend-of-zelda-tears-of-the-kingdom-switch/3600x1300_centerstage_desktop
-curl https://assets.nintendo.com/image/upload/ncom/en_US/merchandising/secondary-centerstage/2023/MNS/IS-3265-ZeldaCharacterShop-Ncom-3580x1080-SecondaryBanner-DT-Logo_v01
+ZELDA_DIRECTORY="${HOME}/Pictures/The_Legend_of_Zelda_-_Tears_of_the_Kingdom"
+mkdir "${ZELDA_DIRECTORY}"
+curl -o "${ZELDA_DIRECTORY}/features-skies-medium-up.jpg" \
+	https://zelda.com/tears-of-the-kingdom/_images/features/features-skies-medium-up.jpg
+curl -o "${ZELDA_DIRECTORY}/features-surface-medium-up.jpg" \
+	https://zelda.com/tears-of-the-kingdom/_images/features/features-surface-medium-up.jpg
+curl -o "${ZELDA_DIRECTORY}/link.png" \
+	https://zelda.com/tears-of-the-kingdom/_images/features/link.png
+curl -o "${ZELDA_DIRECTORY}/link-crouching.png" \
+	https://zelda.com/tears-of-the-kingdom/_images/videos/link-crouching.png
+curl -o "${ZELDA_DIRECTORY}/header-link.pngg" \
+	https://zelda.com/tears-of-the-kingdom/_images/buy/header-link.png
+curl -o "${ZELDA_DIRECTORY}/2250x1266_Ncom_TOTK.jpg" \
+	https://images.ctfassets.net/xuwlxvgj0hyl/2Hddt0JUy8NYiLt91o4P5c/f93661c8f984b94bacd89223fcfad1b3/2250x1266_Ncom_TOTK
+curl -o "${ZELDA_DIRECTORY}/1.1_ProductTile_Switch_TheLegendOfZeldaTearsOfTheKingdom_KeyArt_EN_NOE.jpg" \
+	https://assets.nintendo.eu/image/upload/t_product_tile_desktop/v1/MNS/NOE/70010000063715/1.1_ProductTile_Switch_TheLegendOfZeldaTearsOfTheKingdom_KeyArt_EN_NOE
+curl -o "${ZELDA_DIRECTORY}/112383-nintendo-the-legeld-of-zelda-tears-of-the-kingdom-1200x675.jpg" \
+	https://assets.nintendo.com/image/upload/ncom/My%20Nintendo%20Store/EN-US/Nintendo%20Switch%20Software/the-legend-of-zelda-tears-of-the-kingdom-112383/112383-nintendo-the-legeld-of-zelda-tears-of-the-kingdom-1200x675
+curl -o "${ZELDA_DIRECTORY}/ri1wpkayyhtl6msyhcc4.png" \
+	https://assets.nintendo.eu/image/upload/v1675920708/ri1wpkayyhtl6msyhcc4.png
+curl -o "${ZELDA_DIRECTORY}/link-highlight.png" \
+	https://assets.nintendo.com/image/upload/Microsites/zelda-totk-pmp/link-highlight
+curl -o "${ZELDA_DIRECTORY}/2x1_NSwitch_TloZTearsOfTheKingdom_Gamepage_bannerXS.jpg" \
+	https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_TloZTearsOfTheKingdom_Gamepage_bannerXS.jpg
+curl -o "${ZELDA_DIRECTORY}/HAC_ZTOK_Poster_A2_image600w.jpg" \
+	https://fs-prod-cdn.nintendo-europe.com/media/images/08_content_images/country_support_2/uk_6/HAC_ZTOK_Poster_A2_image600w.jpg
+curl -o "${ZELDA_DIRECTORY}/3600x1300_centerstage_desktop.jpg" \
+	https://assets.nintendo.com/image/upload/ncom/en_US/merchandising/center-stage-banner/the-legend-of-zelda-tears-of-the-kingdom-switch/3600x1300_centerstage_desktop
+curl -o "${ZELDA_DIRECTORY}/IS-3265-ZeldaCharacterShop-Ncom-3580x1080-SecondaryBanner-DT-Logo_v01.png" \
+	https://assets.nintendo.com/image/upload/ncom/en_US/merchandising/secondary-centerstage/2023/MNS/IS-3265-ZeldaCharacterShop-Ncom-3580x1080-SecondaryBanner-DT-Logo_v01
 ```
 
 # https://www.nintendo.co.uk/Games/Nintendo-Switch-games/Pokemon-Let-s-Go-Pikachu--1382836.html
