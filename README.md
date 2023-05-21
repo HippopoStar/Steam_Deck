@@ -49,7 +49,11 @@ Uplay games:                 `<Lutris installation directory>/Games/ubisoft-conn
 Steam:                       `~/.local/share/Steam/userdata/<steam_account_contact_code>`  
 The Witcher III - Wild Hunt: `<Lutris installation directory>/Games/gog/the-witcher-3-wild-hunt-game-of-the-year-edition/drive_c/users/deck/Documents/The\ Witcher\ 3/gamesaves`  
 Uplay games:                 `<Lutris installation directory>/Games/ubisoft-connect/drive_c/Program\ Files\ \(x86\)/Ubisoft/Ubisoft\ Game\ Launcher/savegames`  
-DeSmuME:                     `~/.var/app/net.lutris.Lutris/config/desmume`__
+PPSSPP:                      `~/.var/app/net.lutris.Lutris/config/ppsspp/PSP/SAVEDATA`  
+DeSmuME:                     `~/.var/app/net.lutris.Lutris/config/desmume`  
+Citra:                       `~/.var/app/org.citra_emu.citra/data/citra-emu/sdmc/Nintendo 3DS/00000000000000000000000000000000/00000000000000000000000000000000/title/00040000`  
+Yuzu (Lutris):               `~/.var/app/net.lutris.Lutris/data/yuzu/nand/user/save/0000000000000000`  
+Yuzu (Flatpak):              `~/.var/app/org.yuzu_emu.yuzu/data/yuzu/nand/user/save/0000000000000000`  
 
 ## Steam Game Ids
 [39140](https://store.steampowered.com/app/39140/FINAL_FANTASY_VII/)  
@@ -241,6 +245,27 @@ yuzu:
   title_keys: /home/deck/.var/app/net.lutris.Lutris/data/yuzu/keys/title.keys
 
 _EOF
+```
+
+## Yuzu - Remove from Lutris
+```
+rm ~/.var/app/net.lutris.Lutris/config/lutris/runners/yuzu.yml
+rm -rf ~/.var/app/net.lutris.Lutris/data/lutris/runners/yuzu/
+rm -rf ~/.var/app/net.lutris.Lutris/data/yuzu/
+rm -rf ~/.var/app/net.lutris.Lutris/config/yuzu/
+rm -rf ~/.var/app/net.lutris.Lutris/cache/yuzu/
+# Remove game launch files from ~/.var/app/net.lutris.Lutris/config/lutris/games/
+# Remove game entries from ~/.var/app/net.lutris.Lutris/cache/lutris/game-paths.json
+# Remove game banners from ~/.var/app/net.lutris.Lutris/cache/lutris/banners/
+# Remove game coverart from ~/.var/app/net.lutris.Lutris/cache/lutris/coverart/
+```
+```
+sqlite3
+> .open /home/deck/.var/app/net.lutris.Lutris/data/lutris/pga.db
+> .mode markdown
+> .tables
+> select * from games;
+> select * from games where runner="yuzu";
 ```
 
 ## Yuzu - Use FlatPak
