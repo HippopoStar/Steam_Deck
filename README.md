@@ -26,6 +26,11 @@ SMT: Simultaneous Multi Threading
 curl -L -o ~/Desktop/decky_installer.desktop https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/decky_installer.desktop
 ```
 
+[EmuDeck](https://www.emudeck.com/)  
+```
+curl -L -o ~/Desktop/EmuDeck.desktop https://www.emudeck.com/EmuDeck.desktop
+```
+
 ## Set desktop icons
 
 Steam:                       `~/.local/share/Steam/steam/games`  
@@ -329,6 +334,9 @@ kioclient exec "${MY_DESKTOP_ENTRY_FILE}"
     -> Quit Dolphin and re-open it  
 /!\\ `desktop-file-validate` does not detect the error when arguments are passed to the `TryExec` executable  
 
-Lutris -> Yuzu -> Configure -> Custom executable for the runner:  
-From `/home/deck/.var/app/net.lutris.Lutris/data/lutris/runners/yuzu/yuzu`  
+[LOZ: Tears of the Kingdom fps++, static fps, and visual fixes patch...](https://gbatemp.net/download/loz-tears-of-the-kingdom-fps-static-fps-and-visual-fixes-patch-collection.37996/)  
+```
+curl -L -o ~/Downloads/Mods.zip https://gbatemp.net/download/loz-tears-of-the-kingdom-fps-static-fps-and-visual-fixes-patch-collection.37996/download
+unzip ~/Downloads/Mods.zip 30fps_stable_static_totk/exefs/1.1.0.pchtxt -d ~/.var/app/org.yuzu_emu.yuzu/data/yuzu/load/0100F2C0115B6000/
+```
 
