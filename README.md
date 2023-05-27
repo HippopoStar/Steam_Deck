@@ -55,6 +55,11 @@ Citra:                       `~/.var/app/org.citra_emu.citra/data/citra-emu/sdmc
 Yuzu (Lutris):               `~/.var/app/net.lutris.Lutris/data/yuzu/nand/user/save/0000000000000000`  
 Yuzu (Flatpak):              `~/.var/app/org.yuzu_emu.yuzu/data/yuzu/nand/user/save/0000000000000000`  
 
+## Controller configurations
+
+[241100 - Steam Input Configs](https://steamdb.info/app/241100/)  
+`~/.local/share/Steam/steamapps/workshop/content/241100/`  
+
 ## Steam Game Ids
 [39140](https://store.steampowered.com/app/39140/FINAL_FANTASY_VII/)  
 [200260](https://store.steampowered.com/app/200260/Batman_Arkham_City__Game_of_the_Year_Edition/)  
@@ -227,6 +232,23 @@ yaml files: `~/.var/app/net.lutris.Lutris/config/lutris/runners`
 
 ## Lutris runners documentation
 DeSmuME: `man ~/.var/app/net.lutris.Lutris/data/lutris/runners/desmume/share/man/man1/desmume.1`  
+
+## Citra
+```
+MH4U_GAME='/home/deck/Documents/citra/games/3DS1186 - Monster Hunter 4 Ultimate (Europe)(En,Fr,De,Es) Decrypted.3ds'
+MH4U_ICON='/home/deck/Pictures/emulators/3ds_icon_monster_hunter_4_ultimate.png'
+cat <<_EOF > ~/.local/share/applications/citra-monster-hunter-4-ultimate.desktop
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Monster Hunter 4 Ultimate
+Comment=Start Monster Hunter 4 Ultimate with the Citra Emulator
+Icon=${MH4U_ICON}
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=citra-qt --file-forwarding org.citra_emu.citra @@ "${MH4U_GAME}" @@
+_EOF
+chmod a+x ~/.local/share/applications/citra-monster-hunter-4-ultimate.desktop
+ln -s ~/.local/share/applications/citra-monster-hunter-4-ultimate.desktop ~/Desktop/
+```
 
 ## Yuzu - Migrate from Flatpak to Lutris
 [Lutris - Games - Yuzu](https://lutris.net/games/yuzu/)  
