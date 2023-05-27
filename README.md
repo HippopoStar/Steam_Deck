@@ -46,7 +46,7 @@ Uplay games:                 `<Lutris installation directory>/Games/ubisoft-conn
 
 ## Game Saves
 
-Steam:                       `~/.local/share/Steam/userdata/<steam_account_contact_code>`  
+Steam:                       `~/.local/share/Steam/userdata/<steam_user_id>`  
 The Witcher III - Wild Hunt: `<Lutris installation directory>/Games/gog/the-witcher-3-wild-hunt-game-of-the-year-edition/drive_c/users/deck/Documents/The\ Witcher\ 3/gamesaves`  
 Uplay games:                 `<Lutris installation directory>/Games/ubisoft-connect/drive_c/Program\ Files\ \(x86\)/Ubisoft/Ubisoft\ Game\ Launcher/savegames`  
 PPSSPP:                      `~/.var/app/net.lutris.Lutris/config/ppsspp/PSP/SAVEDATA`  
@@ -57,6 +57,7 @@ Yuzu (Flatpak):              `~/.var/app/org.yuzu_emu.yuzu/data/yuzu/nand/user/s
 
 ## Controller configurations
 
+`~/.local/share/Steam/steamapps/common/Steam\ Controller\ Configs/<steam_user_id>/config/`  
 [241100 - Steam Input Configs](https://steamdb.info/app/241100/)  
 `~/.local/share/Steam/steamapps/workshop/content/241100/`  
 
