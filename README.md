@@ -31,6 +31,18 @@ curl -L -o ~/Desktop/decky_installer.desktop https://github.com/SteamDeckHomebre
 curl -L -o ~/Desktop/EmuDeck.desktop https://www.emudeck.com/EmuDeck.desktop
 ```
 
+Uncompress archives
+```
+MY ARCHIVE='<file_name>'
+
+# ZIP
+unzip "${MY_ARCHIVE}" -d "${MY_ARCHIVE%.zip}"
+
+# RAR
+# sudo apt-get update && sudo apt-get install p7zip-rar
+7z x -o "${MY_ARCHIVE%.rar}" "${MY_ARCHIVE}"
+```
+
 ## Set desktop icons
 
 Steam:                       `~/.local/share/Steam/steam/games`  
@@ -337,6 +349,8 @@ kioclient exec "${MY_DESKTOP_ENTRY_FILE}"
 [LOZ: Tears of the Kingdom fps++, static fps, and visual fixes patch...](https://gbatemp.net/download/loz-tears-of-the-kingdom-fps-static-fps-and-visual-fixes-patch-collection.37996/)  
 ```
 curl -L -o ~/Downloads/Mods.zip https://gbatemp.net/download/loz-tears-of-the-kingdom-fps-static-fps-and-visual-fixes-patch-collection.37996/download
-unzip ~/Downloads/Mods.zip 30fps_stable_static_totk/exefs/1.1.0.pchtxt -d ~/.var/app/org.yuzu_emu.yuzu/data/yuzu/load/0100F2C0115B6000/
+TOTK_VERSION=1.1.0
+unzip ~/Downloads/Mods.zip 30fps_stable_static_totk/exefs/${TOTK_VERSION}.pchtxt -d ~/.var/app/org.yuzu_emu.yuzu/data/yuzu/load/0100F2C0115B6000/
+unzip ~/Downloads/Mods.zip VisualFixes_DisableFSR_totk/exefs/${TOTK_VERSION}.pchtxt -d ~/.var/app/org.yuzu_emu.yuzu/data/yuzu/load/0100F2C0115B6000/
 ```
 
